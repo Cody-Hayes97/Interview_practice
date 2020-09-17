@@ -5,7 +5,26 @@ import re
 import sys
 
 
+def strStr(haystack, needle):
+    # find if the substring 'needle' exist in a string 'haystack'
+    # return index of the first letter in the substring
+    # return -1 otherwise
 
+    # The find() method finds the first occurrence of the specified value.
+    # The find() method returns -1 if the value is not found.
+    # The find() method is almost the same as the index() method, the only difference is that the index() method raises an exception if the value is not found. (See example below)
+    # Plan
+    # if needle string is empty, return zero
+    if len(needle) == 0:
+        return 0
+    # loop through haystack string
+    if needle in haystack:
+        return haystack.find(needle)
+    else:
+        return -1
+
+
+print(strStr('hello', 'll'))
 
 
 # def isValid(s):
